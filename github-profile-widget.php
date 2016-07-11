@@ -35,12 +35,10 @@ add_action( 'wp_enqueue_scripts', 'gmpw_style');
 // Add the stylesheet
 function gmpw_style()
 {
-	$gmpw_css = WP_PLUGIN_URL . '/github-profile-widget.css';
-	if ( file_exists($gmpw_css) )
-	{
-		wp_register_style( 'f13-gmpw-style', $gmpw_css );
-		wp_enqueue_style( 'f13-gmpw-style' );
-	}
+	$gmpw_stylesheet = plugin_dir_url( __FILE__ ) . 'github-profile-widget.css';
+	echo $gmpw_stylesheet;
+	wp_register_style( 'f13-gmpw-style', plugins_url('github-profile-widget.css', __FILE__) );
+  wp_enqueue_style( 'f13-gmpw-style' );
 }
 
 // Widget class
