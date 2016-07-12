@@ -175,7 +175,7 @@ class GitHub_Mini_Profile_Widget extends WP_Widget
 		extract($instance);
 
 		// Set the cache name for this instance of the widget
-		$cache = get_transient('wpgpw' . md5(serialize($atts)));
+		$cache = get_transient('wpgpw' . md5(serialize($github_user)));
 
 		if ($cache)
 		{
@@ -292,7 +292,12 @@ class GitHub_Mini_Profile_Widget extends WP_Widget
 					</div>
 				</div>
 			';
-			set_transient('wpgpw' . md5(serialize($atts)), $widget, $github_timeout);
+			$timeout = $github_timeout * 60;
+			if ($timeout == 0)
+			{
+				$timeout = 1;
+			}
+			set_transient('wpgpw' . md5(serialize($github_user)), $widget, $timeout);
 			echo $widget;
 		}
 	}
