@@ -101,6 +101,17 @@
   margin-right: 5px;
 }
 
+.gmpw-info a
+{
+  color: #4088c0;
+  text-decoration: none;
+}
+
+.gmpw-info a:hover
+{
+  color: #d8d8d8;
+  text-decoration: underline;
+}
 .gmpw-repos
 {
   padding: 0.323em 4%;
@@ -109,6 +120,18 @@
 .gmpw-repos > span
 {
   display: block;
+}
+
+.gmpw-repos a
+{
+  color: #4088c0;
+  text-decoration: none;
+}
+
+.gmpw-repos a:hover
+{
+  color: #d8d8d8;
+  text-decoration: underline;
 }
 
 .gmpw-numbers
