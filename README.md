@@ -44,6 +44,7 @@ A) No... Although it is recommended, especially if you wish to have the cache ti
 # Screnshot
 
 ![An example showing the GitHub Mini Profile Widget in use.](/screenshot-1.png?raw=true "GitHub Profile Widget")
+
 An example showing the GitHub Mini Profile Widget in use.
 
 # Changelog

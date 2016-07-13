@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: GitHub Mini Profile Widget
-Plugin URI: http://f13dev.com
+Plugin URI: http://f13dev.com/wordpress-plugin-github-profile-widget/
 Description: Add a mini version of your GitHub profile to a widget on a WordPress powered site.
 Version: 1.0
 Author: Jim Valentine - f13dev
