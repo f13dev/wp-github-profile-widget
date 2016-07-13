@@ -6,7 +6,7 @@ Description: Add a mini version of your GitHub profile to a widget on a WordPres
 Version: 1.0
 Author: Jim Valentine - f13dev
 Author URI: http://f13dev.com
-Text Domain: github-mini-profile-widget
+Text Domain: f13-github-mini-profile-widget
 License: GPLv3
 */
 
