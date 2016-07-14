@@ -98,7 +98,7 @@ class GitHub_Mini_Profile_Widget extends WP_Widget
 	* @param string $field_default_value
 	* @param string $field_type
 	*/
-	private function add_field($field_name, $field_description = '', $field_default_value = '', $field_type = 'text')
+	private function add_field($field_name, $field_description, $field_default_value, $field_type)
 	{
 		if(!is_array($this->fields))
 		$this->fields = array();
@@ -185,7 +185,7 @@ class GitHub_Mini_Profile_Widget extends WP_Widget
 		else
 		{
 			// Get the API results
-			$userAPI = $this->f13_get_github_api('https://api.github.com/users/' . $github_user);
+			$userAPI = $this->f13_get_github_api('https://api.github.com/users/' . $github_user, $github_token);
 			$widget = '
 				<div class="gmpw-container">
 					<a href="https://github.com/' . $userAPI['login'] . '" class="gmpw-head-link">
@@ -256,7 +256,7 @@ class GitHub_Mini_Profile_Widget extends WP_Widget
 					// Change to if show numbers
 					if (true)
 					{
-						$starredCount = count($this->f13_get_github_api('https://api.github.com/users/' . $github_user . '/starred'));
+						$starredCount = count($this->f13_get_github_api('https://api.github.com/users/' . $github_user . '/starred', $github_token));
 						$widget .= '
 						<div class="gmpw-numbers">
 							<a href="#">
@@ -302,7 +302,7 @@ class GitHub_Mini_Profile_Widget extends WP_Widget
 		}
 	}
 
-	private function f13_get_github_api($url)
+	private function f13_get_github_api($url, $token)
 	 {
 			 // Start curl
 			 $curl = curl_init();
@@ -311,13 +311,13 @@ class GitHub_Mini_Profile_Widget extends WP_Widget
 			 curl_setopt($curl, CURLOPT_HTTPGET, true);
 
 			 // Check if a token is set
-			 if (preg_replace('/\s+/', '', $this->github_token) != '' || $this->github_token != null)
+			 if (preg_replace('/\s+/', '', $token) != '' || $token != null)
 			 {
 					 // If a token is set attempt to send it in the header
 					 curl_setopt($curl, CURLOPT_HTTPHEADER, array(
 							 'Content-Type: application/json',
 							 'Accept: application/json',
-							 'Authorization: token ' . $this->github_token
+							 'Authorization: token ' . $token
 					 ));
 			 }
 			 else
