@@ -361,62 +361,62 @@ class GitHub_Mini_Profile_Widget extends WP_Widget
 
 	 private function getMonth($month)
 	 {
-		 if ($month == 01)
+		 if ($month == '01')
 		 {
 			 return 'Jan';
 		 }
 		 else
-		 if ($month == 02)
+		 if ($month == '02')
 		 {
 			 return 'Feb';
 		 }
 		 else
-		 if ($month == 03)
+		 if ($month == '03')
 		 {
 			 return 'Mar';
 		 }
 		 else
-		 if ($month == 04)
+		 if ($month == '04')
 		 {
 			 return 'Apr';
 		 }
 		 else
-		 if ($month == 05)
+		 if ($month == '05')
 		 {
 			 return 'May';
 		 }
 		 else
-		 if ($month == 06)
+		 if ($month == '06')
 		 {
 			 return 'Jun';
 		 }
 		 else
-		 if ($month == 07)
+		 if ($month == '07')
 		 {
 			 return 'Jul';
 		 }
 		 else
-		 if ($month == 08)
+		 if ($month == '08')
 		 {
 			 return 'Aug';
 		 }
 		 else
-		 if ($month == 09)
+		 if ($month == '09')
 		 {
 			 return 'Sep';
 		 }
 		 else
-		 if ($month == 10)
+		 if ($month == '10')
 		 {
 			 return 'Oct';
 		 }
 		 else
-		 if ($month == 11)
+		 if ($month == '11')
 		 {
 			 return 'Nov';
 		 }
 		 else
-		 if ($month == 12)
+		 if ($month == '12')
 		 {
 			 return 'Dec';
 		 }
