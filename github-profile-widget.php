@@ -256,19 +256,19 @@ class GitHub_Mini_Profile_Widget extends WP_Widget
 						$starredCount = count($this->f13_get_github_api('https://api.github.com/users/' . $github_user . '/starred', $github_token));
 						$widget .= '
 						<div class="gmpw-numbers">
-							<a href="#">
+							<a href="https://github.com/' . $userAPI['login'] . '/followers">
 								<span>
 									<span>' . $userAPI['followers'] . '</span><br />
 									Follower
 								</span>
 							</a>
-							<a href="#">
+							<a href="https://github.com/stars/' . $userAPI['login'] . '">
 								<span>
 									<span>' . $starredCount . '</span><br />
 									Starred
 								</span>
 							</a>
-							<a href="#">
+							<a href="https://github.com/' . $userAPI['login'] . '/following">
 								<span>
 									<span>' . $userAPI['following'] . '</span><br />
 									Following
