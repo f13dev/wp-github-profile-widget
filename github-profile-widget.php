@@ -253,9 +253,6 @@ class GitHub_Mini_Profile_Widget extends WP_Widget
 							Joined on ' . $this->gitDate($userAPI['created_at']) . '
 						</span>
 					</div>';
-					// Change to if show numbers
-					if (true)
-					{
 						$starredCount = count($this->f13_get_github_api('https://api.github.com/users/' . $github_user . '/starred', $github_token));
 						$widget .= '
 						<div class="gmpw-numbers">
@@ -278,7 +275,6 @@ class GitHub_Mini_Profile_Widget extends WP_Widget
 								</span>
 							</a>
 						</div>';
-					}
 					$widget .= '
 					<div class="gmpw-repos">
 						<span class="gmpw-repos-public">
