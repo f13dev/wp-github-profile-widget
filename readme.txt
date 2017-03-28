@@ -3,8 +3,8 @@ Contributors: f13dev
 Donate link: http://f13dev.com/wordpress-plugin-github-profile-widget/
 Tags: github, widget, profile, code
 Requires at least: 3.0.1
-Tested up to: 4.5.3
-Stable tag: 1.0
+Tested up to: 4.7.3
+Stable tag: 1.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -50,7 +50,13 @@ No... Although it is recommended, especially if you wish to have the cache timeo
 = 1.0 =
 * Initial release
 
+= 1.1 =
+* Correcting URL of public gists
+
 == Upgrade Notice ==
 
 = 1.0 =
 * Initial release
+
+= 1.1 =
+* Correcting URL of public gists
